@@ -25,5 +25,15 @@ public class DefaultViewTest {
 		 
 		 verify(printStream).println(DefaultView.MAIN_MENU);
 	}
+	
+	@Test
+	public void ShoudPrintQuitMessage() {
+		 PrintStream printStream = mock(PrintStream.class);
+		 
+		 sut = new DefaultView(printStream);
+		 sut.outputQuitMessage();
+		 
+		 verify(printStream).println("You have quit the game!");
+	}
 
 }
