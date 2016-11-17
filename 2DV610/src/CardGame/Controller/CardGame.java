@@ -4,12 +4,14 @@ import CardGame.View.IView;
 
 public class CardGame {
 	
+	private IView view;
+
 	public CardGame(IView view) {
-		// TODO Auto-generated constructor stub
+		this.view = view;
 	}
 
 	public void play() {
-		
+		view.outputMainMenu();
 	}
 
 }
