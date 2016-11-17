@@ -12,6 +12,7 @@ public class CardGame {
 
 	public void play() {
 		view.outputMainMenu();
+		view.outputQuitMessage();
 	}
 
 }
