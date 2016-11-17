@@ -26,4 +26,10 @@ public class DefaultView implements IView {
 		this.printStream.println(QUIT_MESSAGE);
 	}
 
+	@Override
+	public void getInput() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

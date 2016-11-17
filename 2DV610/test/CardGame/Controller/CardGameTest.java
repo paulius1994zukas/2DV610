@@ -25,7 +25,26 @@ public class CardGameTest {
 		sut.play();
 		
 		verify(view).outputMainMenu();
+	}
+	
+	@Test
+	public void shouldShowQuitMessage() {
+		IView view = mock(DefaultView.class);
+		
+		sut = new CardGame(view);
+		sut.play();
+
 		verify(view).outputQuitMessage();
+	}
+	
+	@Test
+	public void shouldWaitForInput() {
+		IView view = mock(DefaultView.class);
+		
+		sut = new CardGame(view);
+		sut.play();
+
+		verify(view).getInput();
 	}
 
 }
