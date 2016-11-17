@@ -5,6 +5,8 @@ import java.io.PrintStream;
 public class DefaultView implements IView {
 	
 	protected final static String MAIN_MENU = "Menu:\n 1. Higher, 2. Lower, 3. Quit";
+	
+	protected final static String QUIT_MESSAGE = "You have quit the game!";
 
 	private PrintStream printStream;
 
@@ -21,7 +23,7 @@ public class DefaultView implements IView {
 
 	@Override
 	public void outputQuitMessage() {
-		this.printStream.println("You have quit the game!");
+		this.printStream.println(QUIT_MESSAGE);
 	}
 
 }

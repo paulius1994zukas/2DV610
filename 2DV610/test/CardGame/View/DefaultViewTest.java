@@ -11,29 +11,27 @@ import org.junit.Test;
 public class DefaultViewTest {
 
 	private IView sut;
+	private PrintStream printStream;
 
 	@Before
 	public void setUp() throws Exception {
+		printStream = mock(PrintStream.class);
+		
+		sut = new DefaultView(printStream);
 	}
 
 	@Test
 	public void ShoudPrintMenu() {
-		 PrintStream printStream = mock(PrintStream.class);
-		 
-		 sut = new DefaultView(printStream);
 		 sut.outputMainMenu();
 		 
 		 verify(printStream).println(DefaultView.MAIN_MENU);
 	}
 	
 	@Test
-	public void ShoudPrintQuitMessage() {
-		 PrintStream printStream = mock(PrintStream.class);
-		 
-		 sut = new DefaultView(printStream);
+	public void ShoudPrintQuitMessage() {	 
 		 sut.outputQuitMessage();
 		 
-		 verify(printStream).println("You have quit the game!");
+		 verify(printStream).println(DefaultView.QUIT_MESSAGE);
 	}
 
 }
