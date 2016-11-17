@@ -16,6 +16,8 @@ public class DeckTest {
 	public void shouldReturnGetM_deck() {
 		Deck deck = mock(Deck.class);
 		
+		deck.getM_deck();
+		
 		verify(deck).getM_deck();
 	}
 
