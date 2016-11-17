@@ -23,7 +23,7 @@ public class DefaultViewTest {
 		 sut = new DefaultView(printStream);
 		 sut.outputMainMenu();
 		 
-		 verify(printStream).println("Menu:\n 1. Higher, 2. Lower, 3. Quit");
+		 verify(printStream).println(DefaultView.MAIN_MENU);
 	}
 
 }
