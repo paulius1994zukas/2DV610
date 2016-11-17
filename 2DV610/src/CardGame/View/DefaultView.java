@@ -4,13 +4,17 @@ import java.io.PrintStream;
 
 public class DefaultView implements IView {
 
+	private PrintStream printStream;
+
 	public DefaultView(PrintStream printStream) {
 		// TODO Auto-generated constructor stub
+		this.printStream = printStream;
 	}
 
 	@Override
 	public void outputMainMenu() {
 		// TODO Auto-generated method stub
+		this.printStream.println("Menu:\n 1. Higher, 2. Lower, 3. Quit");
 	}
 
 }
