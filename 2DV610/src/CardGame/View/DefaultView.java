@@ -21,8 +21,7 @@ public class DefaultView implements IView {
 
 	@Override
 	public void outputQuitMessage() {
-		// TODO Auto-generated method stub
-		
+		this.printStream.println("You have quit the game!");
 	}
 
 }
