@@ -19,4 +19,10 @@ public class DefaultView implements IView {
 		this.printStream.println(MAIN_MENU);
 	}
 
+	@Override
+	public void outputQuitMessage() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

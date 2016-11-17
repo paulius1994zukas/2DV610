@@ -4,4 +4,6 @@ public interface IView {
 
 	void outputMainMenu();
 
+	void outputQuitMessage();
+
 }

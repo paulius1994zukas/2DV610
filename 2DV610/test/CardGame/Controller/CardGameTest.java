@@ -18,13 +18,14 @@ public class CardGameTest {
 	}
 
 	@Test
-	public void testPlay() {
+	public void shouldShowMenu() {
 		IView view = mock(DefaultView.class);
 		
 		sut = new CardGame(view);
 		sut.play();
 		
 		verify(view).outputMainMenu();
+		verify(view).outputQuitMessage();
 	}
 
 }

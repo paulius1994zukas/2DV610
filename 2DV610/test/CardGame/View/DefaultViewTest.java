@@ -17,7 +17,7 @@ public class DefaultViewTest {
 	}
 
 	@Test
-	public void testOutputMainMenu() {
+	public void ShoudPrintMenu() {
 		 PrintStream printStream = mock(PrintStream.class);
 		 
 		 sut = new DefaultView(printStream);
